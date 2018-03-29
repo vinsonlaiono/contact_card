@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script> 
+    <script>
+
+
+        
+
+        $(document).ready(function(){
+          
+    
+            $('.submit_btn').click(function(){
+                var data = {firstname: $(".first_name:text").val(), lastname: $(".last_name:text").val()};
+                var domHTML = '<div class="contact_card"><h4>' + data.firstname + '</h4><h4>' + data.lastname +'</h4><p>Click here to see description</p></div>';
+                // console.log(domHTML)
+                    $('.card_container').append(domHTML);
+                    return false;   
+            })
+            $(document).on("click", ".contact_card", function(){
+                var increment = increment++;
+                var newdescription = $('#description').val();
+                // console.log(newdescription);
+                $(this).html(newdescription)
+            })
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <label for="first">First Name: </label><input class="first_name"  type="text" value="First Name">
+            <label for="last">Last Name: </label><input class="last_name"  type="text" value="Last Name">
+
+            <p>Description</p>
+            <textarea name="description" type="text" id="description" cols="30" rows="10"></textarea>
+            <button class="submit_btn">Submit</button>
+        </form>
+        
+        <div class="card_container"></div>
+        
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+.container{
+    width: 510px;
+    min-height: 520px;
+    background-color: rgb(193, 193, 201);
+    margin: auto;
+    border: solid 1px black;
+    padding: 15px;
+    margin-top: 20px;
+}
+input{
+    display: block;
+    margin-top: 3px;
+    margin-bottom: 15px;
+}
+form{
+    width: 48%;
+    height: 520px;
+    /* background-color: rgb(248, 248, 248); */
+    display: inline-block;
+}
+.contact_card{
+    height: 90px;
+    width: 100%;
+    background-color: rgb(46, 128, 159);
+    vertical-align: top;
+    margin-top: 5px; 
+}
+h4{
+    padding-top: 15px;
+}
+.card_container{
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    text-align: center;
+
+}
+.card_container p{
+    font-size: 12px;
+}
+button{
+    display: block;
+}
