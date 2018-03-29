@@ -7,24 +7,23 @@
     <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script> 
     <script>
 
-
-        
-
         $(document).ready(function(){
           
     
             $('.submit_btn').click(function(){
                 var data = {firstname: $(".first_name:text").val(), lastname: $(".last_name:text").val()};
-                var domHTML = '<div class="contact_card"><h4>' + data.firstname + '</h4><h4>' + data.lastname +'</h4><p>Click here to see description</p></div>';
-                // console.log(domHTML)
+                var newdescription = $('#description').val();
+                
+                var domHTML = '<div class="contact_card"><h4>' + data.firstname + '</h4><h4>' + data.lastname +'</h4><p>Click here to see description</p><span hidden class = "back_card">'+ newdescription +'</span></div>';
+                
                     $('.card_container').append(domHTML);
                     return false;   
             })
             $(document).on("click", ".contact_card", function(){
-                var increment = increment++;
-                var newdescription = $('#description').val();
-                // console.log(newdescription);
-                $(this).html(newdescription)
+                
+                $(this).children('h4').hide();
+                $(this).children('p').hide();
+                $(this).children('span').show();
             })
         });
     </script>
